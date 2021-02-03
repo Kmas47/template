@@ -5,26 +5,17 @@ function showMenu() {
     
     menu.style.display = 'block';
     menuIcon.style.display = 'none';
-
-    createList('Loans','Finance', 'debt');
-
-    const removeList = (list) => list.forEach(rl => rl.remove());
-
-    
     
     menu.addEventListener('click', () => {
         if(event.target == close) {
-            removeList(document.querySelectorAll('.remove'));
             menu.style.display ='none';
             menuIcon.style.display = 'block';
-            topScroll();
         }
     });
 }
 
 function login() { 
     window.scroll({top: document.body.scrollHeight, behavior: "smooth"});    
-    showMenu();
 }
 
 function topScroll() {          
